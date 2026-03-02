@@ -17,11 +17,10 @@ Pages are numbered to suggest a reading order, but each page is self-contained a
 
 Step-by-step guidance for integrating with GP IT systems.
 
-- [Development guide](dev-guide/index.md)
-- [What it is](dev-guide/what-it-is.md)
-- [Integration overview](dev-guide/integration-overview.md)
-- [Health Check data flow](dev-guide/health-check-data-flow.md)
-- [Acknowledgement flow](dev-guide/acknowledgement-flow.md)
+- [Development guide](dev-guide/00-index.md)
+- [Integration overview](dev-guide/01-integration-overview.md)
+- [Health Check data flow](dev-guide/02-health-check-data-flow.md)
+- [Acknowledgement flow](dev-guide/03-acknowledgement-flow.md)
 
 ### FHIR Bundle Descriptions
 
