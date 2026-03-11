@@ -2,6 +2,7 @@
 layout: default
 title: "FHIR standard reference"
 ---
+{% from "inset-text.njk" import insetText %}
 
 The NHS Digital Health Check service implements the **HL7 FHIR R4** (Release 4) specification with conformance to the **UK Core FHIR Implementation Guide**. This document outlines the standards foundation and conformance requirements.
 
@@ -35,7 +36,7 @@ FHIR defines healthcare data as **Resources** - discrete units of exchangeable d
 | DiagnosticReport | [https://simplifier.net/hl7fhirukcorer4/ukcore-diagnosticreport](https://simplifier.net/hl7fhirukcorer4/ukcore-diagnosticreport) | Clinical reports |
 | QuestionnaireResponse | [https://hl7.org/fhir/R4/questionnaireresponse.html](https://hl7.org/fhir/R4/questionnaireresponse.html) | Answers to questionnaires |
 
-> **Note:** This project does not use any custom profiles. Where a UK Core profile exists (e.g. Composition, Encounter, Observation, DiagnosticReport), resources conform to that profile. For Bundle, RiskAssessment, and QuestionnaireResponse, no UK Core profile is defined, so the base FHIR R4 resource definitions apply.
+{{ insetText("This project does not use any custom profiles. Where a UK Core profile exists (e.g. Composition, Encounter, Observation, DiagnosticReport), resources conform to that profile. For Bundle, RiskAssessment, and QuestionnaireResponse, no UK Core profile is defined, so the base FHIR R4 resource definitions apply.") }}
 
 #### Data Types
 

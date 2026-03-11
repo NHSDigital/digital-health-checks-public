@@ -10,7 +10,7 @@ Partners consuming this data will find detailed specifications for:
 - Understanding the structure and content of FHIR Bundles
 - Interpreting clinical observations and risk assessments
 - Mapping terminology codes to clinical concepts
-Integrating data into downstream systems
+- Integrating data into downstream systems
 
 
 # Data flow

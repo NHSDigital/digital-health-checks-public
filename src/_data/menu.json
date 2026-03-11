@@ -1,6 +1,6 @@
 [
   {
-    "label": "Dev Guide",
+    "label": "Development Guide",
     "items": [
       { "label": "Development guide", "path": "/dev-guide/" },
       { "label": "Integration overview", "path": "/dev-guide/integration-overview/" },
