@@ -2,6 +2,8 @@
 layout: default
 title: "Document purpose"
 ---
+{% from "image-pop-out.njk" import imagePopOut %}
+
 This documentation provides comprehensive guidance for partners integrating with the NHS Digital Health Check online service. It describes the FHIR (Fast Healthcare Interoperability Resources) data structures transmitted to the [NHS Patient Data Manager](https://digital.nhs.uk/services/patient-data-manager), a FHIR-compliant data store.
 
 Partners consuming this data will find detailed specifications for:
@@ -12,7 +14,7 @@ Integrating data into downstream systems
 
 
 # Data flow
-![Integration diagram](/digital-health-checks-public/fhir-bundle-descriptions/assets/Integration-overview.png)
+{{ imagePopOut("/digital-health-checks-public/fhir-bundle-descriptions/assets/Integration-overview.png", "Integration diagram") }}
 
 # Involved resources
 

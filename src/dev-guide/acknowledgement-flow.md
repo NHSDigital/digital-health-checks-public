@@ -2,6 +2,7 @@
 layout: default
 title: "Acknowledgement flow"
 ---
+{% from "image-pop-out.njk" import imagePopOut %}
 
 ## Overview
 
@@ -9,7 +10,7 @@ The acknowledgement flow is implemented using the [Acknowledgement framework](ht
 
 Under the framework, the consumer of a Health Check notification must retrieve the data from PDM. When data is manually filed into the patient record, the consumer must issue a technical acknowledgement after receiving the Health Check event, followed by a business acknowledgement once the data has been successfully written to the patient record.
 
-![Integration overview](/digital-health-checks-public/dev-guide/assets/Integration-overview-ack.png)
+{{ imagePopOut("/digital-health-checks-public/dev-guide/assets/Integration-overview-ack.png", "Integration overview") }}
 
 The primary interface for the data consumer is PDM. The MessageHeader and OperationOutcome FHIR resources are used to carry acknowledgement details. Once these resources have been successfully created, PDM issues an MNS notification to inform the NHS Health Check Service that the acknowledgement is ready to be retrieved.
 
@@ -22,25 +23,25 @@ The framework supports two acknowledgement modes. In single-acknowledgement mode
 
 ### Positive Acknowledgement (Business Acknowledgement)
 
-![Positive Acknowledgement (Business Acknowledgement)](/digital-health-checks-public/dev-guide/assets/positive-ack.png)
+{{ imagePopOut("/digital-health-checks-public/dev-guide/assets/positive-ack.png", "Positive Acknowledgement (Business Acknowledgement)") }}
 
 ### Negative Acknowledgement (Business Acknowledgement)
 
-![Negative Acknowledgement (Business Acknowledgement)](/digital-health-checks-public/dev-guide/assets/negative.ack.png)
+{{ imagePopOut("/digital-health-checks-public/dev-guide/assets/negative.ack.png", "Negative Acknowledgement (Business Acknowledgement)") }}
 
 ## Business and Technical Acknowledgement Mode
 
 ### Positive Technical and Positive Business Acknowledgement
 
-![Positive Technical and Positive Business Acknowledgement](/digital-health-checks-public/dev-guide/assets/positive-tech-ack.png)
+{{ imagePopOut("/digital-health-checks-public/dev-guide/assets/positive-tech-ack.png", "Positive Technical and Positive Business Acknowledgement") }}
 
 ### Positive Technical and Negative Business Acknowledgement
 
-![Positive Technical and Negative Business Acknowledgement](/digital-health-checks-public/dev-guide/assets/postiive-tech-nagative-business-ack.png)
+{{ imagePopOut("/digital-health-checks-public/dev-guide/assets/postiive-tech-nagative-business-ack.png", "Positive Technical and Negative Business Acknowledgement") }}
 
 ### Negative Technical Acknowledgement
 
-![Negative Technical Acknowledgement](/digital-health-checks-public/dev-guide/assets/negative-tech-ack.png)
+{{ imagePopOut("/digital-health-checks-public/dev-guide/assets/negative-tech-ack.png", "Negative Technical Acknowledgement") }}
 
 ### Positive Technical and no Business Acknowledgement
 
