@@ -1,0 +1,16 @@
+{% macro contentsList(items, currentTitle) %}
+<nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+  <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+  <ol class="nhsuk-contents-list__list">
+    {%- for item in items %}
+    <li class="nhsuk-contents-list__item">
+      {%- if item.title == currentTitle %}
+      <span class="nhsuk-contents-list__current">{{ item.title }}</span>
+      {%- else %}
+      <a class="nhsuk-contents-list__link" href="{{ item.url }}">{{ item.title }}</a>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+</nav>
+{% endmacro %}

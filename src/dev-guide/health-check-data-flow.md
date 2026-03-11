@@ -2,6 +2,7 @@
 layout: default
 title: "Health Check data flow"
 ---
+{% from "inset-text.njk" import insetText %}
 
 ## Introduction
 
@@ -52,7 +53,7 @@ The NHS Health Check online service will publish an MNS event each time Health C
 
 All Health Check–related information is stored in PDM as a set of FHIR resources. These resources are linked together through a FHIR Composition resource. To ensure the full bundle is returned by the FHIR server, the `$document` operation must be used. This operation will be included by default in the data pointer (`dataref`) sent within the MNS event. Example link: `https://{PDM_BASE_URL}/Composition/{ID}/$document`.
 
-> **Info:** Please follow our Health Check specific [FHIR Resources spec](/digital-health-checks-public/fhir-bundle-descriptions/) for further details.
+{{ insetText('Please follow our Health Check specific <a href="/digital-health-checks-public/fhir-bundle-descriptions/">FHIR Resources spec</a> for further details.') }}
 
 ### What data is transmitted
 

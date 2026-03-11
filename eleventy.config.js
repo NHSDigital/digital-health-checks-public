@@ -18,6 +18,20 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/dev-guide/assets');
   eleventyConfig.addPassthroughCopy('./src/fhir-bundle-descriptions/assets');
 
+  // Add NHS Design System classes to markdown-generated tables
+  eleventyConfig.addTransform('nhsuk-tables', function (content) {
+    if ((this.page.outputPath || '').endsWith('.html')) {
+      content = content
+        .replace(/<table>/g, '<table class="nhsuk-table">')
+        .replace(/<thead>/g, '<thead class="nhsuk-table__head">')
+        .replace(/<tbody>/g, '<tbody class="nhsuk-table__body">')
+        .replace(/<tr>/g, '<tr class="nhsuk-table__row">')
+        .replace(/<th>/g, '<th class="nhsuk-table__header" scope="col">')
+        .replace(/<td>/g, '<td class="nhsuk-table__cell">');
+    }
+    return content;
+  });
+
   return {
     dir: {
       input: 'src',
