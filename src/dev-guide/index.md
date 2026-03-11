@@ -5,7 +5,10 @@ title: "Development guide"
 
 This development guide explains the integration between the Health Check Online service and its downstream data consumers. It introduces the overall architecture and describes the two key integration paths, the data flow and the acknowledgement flow.
 
-> *To support this integration, all consumers must be onboarded to the NHS Patient Data Manager (PDM) and the NHS Multicast Notification Service (MNS).*
+<div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>To support this integration, all consumers must be onboarded to the NHS Patient Data Manager (PDM) and the NHS Multicast Notification Service (MNS).</p>
+</div>
 
 ## Contents
 
