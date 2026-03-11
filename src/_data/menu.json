@@ -1,6 +1,6 @@
 [
   {
-    "label": "Development Guide",
+    "label": "Development guide",
     "items": [
       { "label": "Development guide", "path": "/dev-guide/" },
       { "label": "Integration overview", "path": "/dev-guide/integration-overview/" },
@@ -9,14 +9,14 @@
     ]
   },
   {
-    "label": "FHIR Bundle Descriptions",
+    "label": "FHIR bundle descriptions",
     "items": [
-      { "label": "FHIR Bundle specification", "path": "/fhir-bundle-descriptions/" },
+      { "label": "FHIR bundle specification", "path": "/fhir-bundle-descriptions/" },
       { "label": "Overview", "path": "/fhir-bundle-descriptions/overview/" },
       { "label": "FHIR standard reference", "path": "/fhir-bundle-descriptions/fhir-standard-reference/" },
       { "label": "Terminology standards", "path": "/fhir-bundle-descriptions/terminology-standards/" },
       { "label": "Bundle structure", "path": "/fhir-bundle-descriptions/bundle-structure/" },
-      { "label": "Patient & Organisation", "path": "/fhir-bundle-descriptions/patient-and-organisation-identification/" },
+      { "label": "Patient & organisation", "path": "/fhir-bundle-descriptions/patient-and-organisation-identification/" },
       { "label": "Composition resource", "path": "/fhir-bundle-descriptions/composition-resource/" },
       { "label": "Encounter resource", "path": "/fhir-bundle-descriptions/encounter-resource/" },
       { "label": "Vital signs observations", "path": "/fhir-bundle-descriptions/vital-signs-observations/" },

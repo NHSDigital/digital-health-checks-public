@@ -7,7 +7,7 @@ title: "Vital signs observations"
 
 Vital signs observations capture the patient's basic physical measurements collected during the NHS Health Check. These include height, weight, waist circumference, BMI, and blood pressure.
 
-## Observations Included
+## Observations included
 
 | Observation | SNOMED CT Code | LOINC Code | Unit |
 | --- | --- | --- | --- |
@@ -18,7 +18,7 @@ Vital signs observations capture the patient's basic physical measurements colle
 | BMI | `60621009` | `39156-5` | kg/m² |
 | Blood Pressure | `75367002` | `85354-9` | mmHg |
 
-## Observation Category
+## Observation category
 
 All vital signs use the `vital-signs` category:
 
@@ -38,7 +38,7 @@ All vital signs use the `vital-signs` category:
 }
 ```
 
-## Vital Signs Panel
+## Vital Signs panel
 
 The vital signs panel is a grouping observation that references individual measurements.
 
@@ -449,7 +449,7 @@ Blood pressure is recorded as a single observation with two components (systolic
 | Diastolic | mmHg | `mmHg` | 
 
 
-## Common Elements
+## Common elements
 
 All vital signs observations share these common elements:
 

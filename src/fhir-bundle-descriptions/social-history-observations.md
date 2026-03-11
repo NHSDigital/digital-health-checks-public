@@ -5,7 +5,7 @@ title: "Social history observations"
 
 Social history observations capture lifestyle factors relevant to cardiovascular disease risk assessment. These include family history of heart disease, smoking status, and alcohol consumption.
 
-## Observations Included
+## Observations included
 
 | Observation | SNOMED CT Code | Value Type |
 | --- | --- | --- |
@@ -16,7 +16,7 @@ Social history observations capture lifestyle factors relevant to cardiovascular
 
 *Note: Smoking codes vary based on status reported.
 
-## Observation Category
+## Observation category
 
 All social history observations use the `social-history` category:
 
@@ -37,7 +37,7 @@ All social history observations use the `social-history` category:
 }
 ```
 
-## Social History Panel
+## Social History panel
 
 The social history panel groups related observations together.
 
@@ -100,7 +100,7 @@ The social history panel groups related observations together.
 }
 ```
 
-### Panel Codes
+### Panel codes
 
 | System | Code | Display |
 | --- | --- | --- |
@@ -254,7 +254,7 @@ Records the patient's current smoking status.
 }
 ```
 
-### Smoking Status Codes
+### Smoking Status codes
 
 The SNOMED CT code in `code.coding` indicates the specific smoking status:
 
@@ -277,7 +277,7 @@ The `valueCodeableConcept` confirms the status:
 | `N` | No | Status not applicable |
 
 
-## AUDIT-C Alcohol Score
+## AUDIT-C alcohol score
 
 The AUDIT-C (Alcohol Use Disorders Identification Test - Consumption) is a 3-question screening tool for alcohol consumption.
 
@@ -346,7 +346,7 @@ The value is an integer representing the AUDIT-C score:
 | Range | 0 - 12 |
 
 
-## Value Types Summary
+## Value types summary
 
 | Observation | Value Element | Data Type |
 | --- | --- | --- |

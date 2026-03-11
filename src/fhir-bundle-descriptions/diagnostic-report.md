@@ -5,7 +5,7 @@ title: "Diagnostic report"
 
 The **DiagnosticReport** resource contains the conclusions and follow-up recommendations resulting from the NHS Health Check. It summarises the findings and indicates what actions should be taken.
 
-## Resource Purpose
+## Resource purpose
 
 The DiagnosticReport:
 
@@ -14,9 +14,9 @@ The DiagnosticReport:
 - Summarises recommendations for each risk area
 - Serves as the actionable output of the assessment
 
-## Resource Structure
+## Resource structure
 
-### Complete Example
+### Complete example
 
 ```json
 {
@@ -60,9 +60,9 @@ The DiagnosticReport:
 }
 ```
 
-## Element Specification
+## Element specification
 
-### Core Elements
+### Core elements
 
 | Element | Cardinality | Type | Description |
 | --- | --- | --- | --- |
@@ -76,7 +76,7 @@ The DiagnosticReport:
 | `conclusion` | 0..1 | string | Clinical conclusion text |
 | `conclusionCode` | 0..* | CodeableConcept | Coded conclusion |
 
-## Element Details
+## Element details
 
 ### Status
 
@@ -100,7 +100,7 @@ The status is always `final` for completed health checks.
 
 A general description of the report type.
 
-### Effective Date
+### Effective date
 
 ```json
 {
@@ -137,7 +137,7 @@ The `conclusion` element contains a human-readable summary of follow-up recommen
 }
 ```
 
-### Conclusion Format
+### Conclusion format
 
 The conclusion follows this pattern:
 
@@ -145,7 +145,7 @@ The conclusion follows this pattern:
 Follow up comments - [Observable Entity] - [Follow-up Type]. [Observable Entity] - [Follow-up Type]. ...
 ```
 
-### Follow-up Types
+### Follow-up types
 
 | Type | Description |
 | --- | --- |
@@ -174,7 +174,7 @@ The `conclusionCode` provides a coded representation of the overall follow-up ur
 }
 ```
 
-### Conclusion Codes
+### Conclusion codes
 
 | SNOMED CT Code | Display | Meaning |
 | --- | --- | --- |
@@ -182,9 +182,9 @@ The `conclusionCode` provides a coded representation of the overall follow-up ur
 | `2242651000000107` | Digital National Health Service Health Check requires routine follow-up (finding) | Routine follow-up recommended |
 | `2242641000000105` | Digital National Health Service Health Check does not require follow-up (finding) | No follow-up needed |
 
-## Example Scenarios
+## Example scenarios
 
-### Scenario 1: Urgent Follow-up
+### Scenario 1: urgent follow-up
 
 **Situation**: QRISK3 score is 22% (high risk)
 
@@ -205,7 +205,7 @@ The `conclusionCode` provides a coded representation of the overall follow-up ur
 }
 ```
 
-### Scenario 2: Routine Follow-up
+### Scenario 2: routine follow-up
 
 **Situation**: Elevated cholesterol but QRISK3 < 10%
 
@@ -226,7 +226,7 @@ The `conclusionCode` provides a coded representation of the overall follow-up ur
 }
 ```
 
-## Relationship to Other Resources
+## Relationship to other resources
 
 The DiagnosticReport summarises findings from:
 
@@ -240,7 +240,7 @@ RiskAssessments (QRISK3, Leicester)
 
 The report is referenced from the Composition under "Follow-up Recommendations" section.
 
-## Common Elements
+## Common elements
 
 | Element | Description |
 | --- | --- |

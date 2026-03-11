@@ -5,15 +5,15 @@ title: "Composition resource"
 
 The **Composition** resource serves as the document index for the NHS Health Check details. It organises all health check data into logical sections and provides references to the underlying clinical resources.
 
-## Resource Purpose
+## Resource purpose
 
 The Composition:
 
 - Acts as a table of contents for the health check data- Organises observations into clinical categories- Provides document metadata (date, author, subject)- Enables document-based navigation of the health check
 
-## Resource Structure
+## Resource structure
 
-### Complete Example
+### Complete example
 
 ```json
 {
@@ -52,9 +52,9 @@ The Composition:
 }
 ```
 
-## Element Specification
+## Element specification
 
-### Core Elements
+### Core elements
 
 | Element | Cardinality | Type | Description |
 | --- | --- | --- | --- |
@@ -78,7 +78,7 @@ The composition status is always `final` for completed health checks:
 }
 ```
 
-### Type (Document Type) 
+### Type (document type)
 
 The document type uses an NHS-specific SNOMED CT code:
 
@@ -109,11 +109,11 @@ The document type uses an NHS-specific SNOMED CT code:
 }
 ```
 
-## Section Structure
+## Section structure
 
 The Composition contains multiple sections, each grouping related clinical data.
 
-### Section Elements
+### Section elements
 
 | Element | Type | Description |
 | --- | --- | --- |
@@ -121,7 +121,7 @@ The Composition contains multiple sections, each grouping related clinical data.
 | `code` | CodeableConcept | Section classification code |
 | `entry` | Reference[] | Resources in this section |
 
-### Sections Overview
+### Sections overview
 
 | Section Title | Code System | Code | Resources |
 | --- | --- | --- | --- |
@@ -133,9 +133,9 @@ The Composition contains multiple sections, each grouping related clinical data.
 | Risk Assessments | UKCore-RecordStandardHeadings | `clinical-risk-assessment` | RiskAssessments |
 | Follow-up Recommendations |  |  | DiagnosticReport |
 
-## Section Details
+## Section details
 
-### 1. Encounter Information
+### 1. Encounter information
 
 ```json
 {
@@ -150,7 +150,7 @@ The Composition contains multiple sections, each grouping related clinical data.
 
 **Purpose**: Links to the health check session details.
 
-### 2. Vital Signs
+### 2. Vital signs
 
 ```json
 {
@@ -179,7 +179,7 @@ The Composition contains multiple sections, each grouping related clinical data.
 
 - Vital signs panel- Body height- Body weight- Waist circumference- BMI- Blood pressure
 
-### 3. Social History
+### 3. Social history
 
 ```json
 {
@@ -206,7 +206,7 @@ The Composition contains multiple sections, each grouping related clinical data.
 
 - Social history panel- Family history of heart disease- Smoking status- AUDIT-C alcohol score
 
-### 4. Physical Activity
+### 4. Physical activity
 
 ```json
 {
@@ -230,7 +230,7 @@ The Composition contains multiple sections, each grouping related clinical data.
 
 - GPPAQ Physical Activity Index
 
-### 5. Laboratory Results
+### 5. Laboratory results
 
 ```json
 {
@@ -257,7 +257,7 @@ The Composition contains multiple sections, each grouping related clinical data.
 
 - Cholesterol panel (may include failed tests)- Total cholesterol- HDL cholesterol- HDL/LDL ratio- HbA1c
 
-### 6. Risk Assessments
+### 6. Risk assessments
 
 ```json
 {
@@ -282,7 +282,7 @@ The Composition contains multiple sections, each grouping related clinical data.
 
 - QRISK3 cardiovascular risk assessment- Leicester Diabetes Risk Score
 
-### 7. Follow-up Recommendations
+### 7. Follow-up recommendations
 
 ```json
 {
@@ -297,7 +297,7 @@ The Composition contains multiple sections, each grouping related clinical data.
 
 - Diagnostic report with conclusions and recommendations
 
-## Navigation Pattern
+## Navigation pattern
 
 To consume the health check data:
 

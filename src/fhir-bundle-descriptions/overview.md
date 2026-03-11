@@ -4,19 +4,19 @@ title: "Document purpose"
 ---
 {% from "image-pop-out.njk" import imagePopOut %}
 
-This documentation provides comprehensive guidance for partners integrating with the NHS Digital Health Check online service. It describes the FHIR (Fast Healthcare Interoperability Resources) data structures transmitted to the [NHS Patient Data Manager](https://digital.nhs.uk/services/patient-data-manager), a FHIR-compliant data store.
+This documentation provides comprehensive guidance for partners integrating with the NHS Health Check online service. It describes the FHIR (Fast Healthcare Interoperability Resources) data structures transmitted to the [NHS Patient Data Manager](https://digital.nhs.uk/services/patient-data-manager), a FHIR-compliant data store.
 
 Partners consuming this data will find detailed specifications for:
-- Understanding the structure and content of FHIR Bundles
-- Interpreting clinical observations and risk assessments
-- Mapping terminology codes to clinical concepts
-- Integrating data into downstream systems
+- understanding the structure and content of FHIR bundles
+- interpreting clinical observations and risk assessments
+- mapping terminology codes to clinical concepts
+- integrating data into downstream systems
 
 
-# Data flow
+## Data flow
 {{ imagePopOut("/digital-health-checks-public/fhir-bundle-descriptions/assets/Integration-overview.png", "Integration diagram") }}
 
-# Involved resources
+## Involved resources
 
 Each completed NHS Health Check generates a FHIR Transaction Bundle containing:
 

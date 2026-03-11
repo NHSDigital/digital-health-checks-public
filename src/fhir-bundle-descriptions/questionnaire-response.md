@@ -5,14 +5,14 @@ title: "Questionnaire response"
 
 The **QuestionnaireResponse** resource captures the patient's answers to the NHS Health Check medical history questionnaire. This data is used as input for risk calculations, particularly the QRISK3 cardiovascular risk assessment.
 
-## Resource Purpose
+## Resource purpose
 
 The QuestionnaireResponse:
 
 - Captures answers to standardised questions for QRISK3 calculation
 - Links to the defining Questionnaire resource
 
-## Linked Questionnaire
+## Linked questionnaire
 
 The QuestionnaireResponse references the NHS Health Check Medical History Questionnaire:
 
@@ -24,13 +24,13 @@ The QuestionnaireResponse references the NHS Health Check Medical History Questi
 
 | Property | Value |
 | --- | --- |
-| Canonical URL | TBC! |
-| Title | TBC! - Example: NHS Health Check - Medical History Questionnaire |
-| Version | TBC! |
+| Canonical URL | To be confirmed |
+| Title | To be confirmed |
+| Version | To be confirmed |
 
-## Resource Structure
+## Resource structure
 
-### Complete Example
+### Complete example
 
 ```json
 {
@@ -73,9 +73,9 @@ The QuestionnaireResponse references the NHS Health Check Medical History Questi
 }
 ```
 
-## Element Specification
+## Element specification
 
-### Core Elements
+### Core elements
 
 | Element | Cardinality | Type | Description |
 | --- | --- | --- | --- |
@@ -108,7 +108,7 @@ The status is `completed` for submitted questionnaires.
 
 The date and time when the questionnaire was completed.
 
-## Questions Included
+## Questions included
 
 The medical history questionnaire includes questions relevant to QRISK3 calculation:
 
@@ -122,7 +122,7 @@ The medical history questionnaire includes questions relevant to QRISK3 calculat
 | `rheumatoidArthritis` | Has a healthcare professional ever diagnosed you with rheumatoid arthritis? | Yes/No |
 | `steroidTablets` | Do you regularly take corticosteroid tablets? | Yes/No |
 
-## Item Structure
+## Item structure
 
 Each item represents a question-answer pair:
 
@@ -142,7 +142,7 @@ Each item represents a question-answer pair:
 }
 ```
 
-### Item Elements
+### Item elements
 
 | Element | Type | Description |
 | --- | --- | --- |
@@ -151,7 +151,7 @@ Each item represents a question-answer pair:
 | `answer` | array | Array of answers (typically one) |
 | `answer.valueCoding` | Coding | Coded answer value |
 
-## Answer Coding
+## Answer coding
 
 All questions use Yes/No coding from HL7 v2-0532:
 
@@ -162,7 +162,7 @@ All questions use Yes/No coding from HL7 v2-0532:
 | `Y` | Yes |
 | `N` | No |
 
-### Example: Yes Answer
+### Example: yes answer
 
 ```json
 {
@@ -180,7 +180,7 @@ All questions use Yes/No coding from HL7 v2-0532:
 }
 ```
 
-### Example: No Answer
+### Example: no answer
 
 ```json
 {
@@ -198,7 +198,7 @@ All questions use Yes/No coding from HL7 v2-0532:
 }
 ```
 
-## Complete Item List Example
+## Complete item list example
 
 ```json
 {
@@ -298,9 +298,9 @@ All questions use Yes/No coding from HL7 v2-0532:
 }
 ```
 
-## Clinical Significance
+## Clinical significance
 
-### QRISK3 Risk Factors
+### QRISK3 risk factors
 
 Each question relates to a QRISK3 risk factor:
 
@@ -314,7 +314,7 @@ Each question relates to a QRISK3 risk factor:
 | `rheumatoidArthritis` | Rheumatoid arthritis |
 | `steroidTablets` | Regular corticosteroid use |
 
-## Relationship to Other Resources
+## Relationship to other resources
 
 The QuestionnaireResponse is referenced by the QRISK3 RiskAssessment:
 

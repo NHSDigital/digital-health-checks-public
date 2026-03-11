@@ -1,6 +1,6 @@
-## NHS Digital Health Check — Developer Documentation
+## NHS Health Check online — Developer Documentation
 
-This repository contains the technical documentation for integrating with the **NHS Digital Health Check online service**. It is aimed at GP IT system suppliers and other partners who need to consume health check data via FHIR-based APIs.
+This repository contains the technical documentation for integrating with the **NHS Health Check online service**. It is aimed at GP IT system suppliers and other partners who need to consume health check data via FHIR-based APIs.
 
 The documentation is split into two sections:
 

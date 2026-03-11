@@ -64,7 +64,7 @@ Physical activity is assessed using the **General Practice Physical Activity Que
 }
 ```
 
-## Element Specification
+## Element specification
 
 ### Category
 
@@ -108,11 +108,11 @@ The observation code identifies this as a GPPAQ Physical Activity Index:
 | --- | --- | --- |
 | SNOMED CT | `1086511000000107` | General Practice Physical Activity Questionnaire Physical Activity Index |
 
-## Physical Activity Index Values
+## Physical Activity Index values
 
 The GPPAQ produces a Physical Activity Index (PAI) categorising patients into four levels:
 
-### Value Codes
+### Value codes
 
 | SNOMED CT Code | Display | Activity Level |
 | --- | --- | --- |
@@ -121,7 +121,7 @@ The GPPAQ produces a Physical Activity Index (PAI) categorising patients into fo
 | `366251000000109` | General practice physical activity questionnaire physical activity index: moderately active | Moderately Active |
 | `366261000000107` | General practice physical activity questionnaire physical activity index: moderately inactive | Moderately Inactive |
 
-### Example Value
+### Example value
 
 ```json
 {
@@ -137,7 +137,7 @@ The GPPAQ produces a Physical Activity Index (PAI) categorising patients into fo
 }
 ```
 
-## Common Elements
+## Common elements
 
 | Element | Description |
 | --- | --- |

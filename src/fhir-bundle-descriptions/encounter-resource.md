@@ -5,17 +5,17 @@ title: "Encounter resource"
 
 ## Overview
 
-The **Encounter** resource represents the NHS Health Check session - the healthcare interaction during which the health check was conducted. This is a virtual encounter as the NHS Digital Health Check is completed online.
+The **Encounter** resource represents the NHS Health Check session - the healthcare interaction during which the health check was conducted. This is a virtual encounter as the NHS Health Check online service is completed remotely.
 
-## Resource Purpose
+## Resource purpose
 
 The Encounter:
 
 - Records the health check session details- Provides temporal context (when the check occurred)- Identifies the service provider- Links all clinical observations to a single healthcare event
 
-## Resource Structure
+## Resource structure
 
-### Complete Example
+### Complete example
 
 ```json
 {
@@ -63,9 +63,9 @@ The Encounter:
 }
 ```
 
-## Element Specification
+## Element specification
 
-### Core Elements
+### Core elements
 
 | Element | Cardinality | Type | Description |
 | --- | --- | --- | --- |
@@ -78,7 +78,7 @@ The Encounter:
 | `period` | 0..1 | Period | Encounter time period |
 | `serviceProvider` | 0..1 | Reference | Organisation providing service |
 
-## Element Details
+## Element details
 
 ### Identifier
 
@@ -190,7 +190,7 @@ The time period of the encounter:
 | `start` | dateTime | When the encounter began |
 | `end` | dateTime | When the encounter finished |
 
-**Note**: For the digital health check, start and end times may be the same if recorded as a single point in time.
+**Note**: For the NHS Health Check online, start and end times may be the same if recorded as a single point in time.
 
 ### Service Provider
 
@@ -209,7 +209,7 @@ The organisation providing the NHS Health Check service:
 
 This uses the ODS organisation code to identify the provider.
 
-## Relationship to Other Resources
+## Relationship to other resources
 
 The Encounter is referenced by all clinical resources in the bundle:
 
@@ -222,7 +222,7 @@ Encounter
 └── referenced by → QuestionnaireResponse.encounter
 ```
 
-### Example Reference
+### Example reference
 
 Other resources reference the encounter using:
 
@@ -234,7 +234,7 @@ Other resources reference the encounter using:
 }
 ```
 
-## UK Core Conformance
+## UK Core conformance
 
 This resource conforms to:
 

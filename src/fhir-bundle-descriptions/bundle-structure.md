@@ -3,9 +3,9 @@ layout: default
 title: "Bundle structure"
 ---
 
-The NHS Digital Health Check transmits data to the NHS Patient Data Manager as a **FHIR Transaction Bundle**. This document describes the bundle structure, transaction semantics, and processing expectations.
+The NHS Health Check online transmits data to the NHS Patient Data Manager as a **FHIR Transaction Bundle**. This document describes the bundle structure, transaction semantics, and processing expectations.
 
-## Bundle Type
+## Bundle type
 
 The bundle uses the `transaction` type, which ensures atomic processing - either all resources are successfully processed, or none are.
 
@@ -16,9 +16,7 @@ The bundle uses the `transaction` type, which ensures atomic processing - either
 }
 ```
 
-### Bundle Structure
-
-### Top-Level Elements
+### Top-level elements
 
 ```json
 {
@@ -34,7 +32,7 @@ The bundle uses the `transaction` type, which ensures atomic processing - either
 }
 ```
 
-### Element Descriptions
+### Element descriptions
 
 | Element | Type | Description |
 | --- | --- | --- |
@@ -45,7 +43,7 @@ The bundle uses the `transaction` type, which ensures atomic processing - either
 | `timestamp` | instant | When the bundle was assembled (ISO 8601) |
 | `entry` | array | Array of bundle entries containing resources |
 
-### Bundle Identifier
+### Bundle identifier
 
 The bundle identifier uniquely identifies this NHS Health Check submission:
 
@@ -60,7 +58,7 @@ The bundle identifier uniquely identifies this NHS Health Check submission:
 
 - **System**: NHS Health Check Online service namespace- **Value**: UUID matching the bundle `id`
 
-## Bundle Entry Structure
+## Bundle entry structure
 
 Each entry in the bundle follows this structure:
 
@@ -80,7 +78,7 @@ Each entry in the bundle follows this structure:
 }
 ```
 
-### Entry Elements
+### Entry elements
 
 | Element | Description |
 | --- | --- |
@@ -88,7 +86,7 @@ Each entry in the bundle follows this structure:
 | `resource` | The FHIR resource being transmitted |
 | `request` | Transaction request details |
 
-### Full URL Format
+### Full URL format
 
 Within the transaction bundle, resources use `urn:uuid:` URNs as temporary identifiers:
 
@@ -100,9 +98,9 @@ These are used for:
 
 - Internal references within the bundle- Resolution by the FHIR server during processing
 
-## Transaction Request
+## Transaction request
 
-### Request Structure
+### Request structure
 
 ```json
 {
@@ -114,7 +112,7 @@ These are used for:
 }
 ```
 
-### Request Elements
+### Request elements
 
 | Element | Value | Description |
 | --- | --- | --- |
@@ -130,7 +128,7 @@ The `ifNoneMatch: "*"` header ensures idempotent processing:
 
 This allows safe resubmission of bundles without creating duplicate data.
 
-## Resource Order in Bundle
+## Resource order in bundle
 
 Resources are ordered logically, with the Composition first (as the document index), followed by referenced resources:
 
@@ -140,9 +138,9 @@ Social History (family history, smoking, alcohol)
 Physical Activity (GPPAQ)
 Laboratory Results (cholesterol, HbA1c)- **RiskAssessments** - QRISK3 and Leicester Diabetes scores- **DiagnosticReport** - Follow-up recommendations- **QuestionnaireResponse** - Medical history answers
 
-## Reference Resolution
+## Reference resolution
 
-### Internal References
+### Internal references
 
 Within the bundle, resources reference each other using relative references:
 
@@ -156,7 +154,7 @@ Within the bundle, resources reference each other using relative references:
 
 The FHIR server resolves these references during transaction processing.
 
-### Reference Pattern
+### Reference pattern
 
 References follow the format: `ResourceType/id`
 
@@ -164,9 +162,9 @@ Examples:
 
 - `Encounter/fa991ce0-1950-4595-ab59-6ce1568e586e`- `Observation/3ea3d79d-85d5-453b-92e7-0d034ee7b6a0`- `RiskAssessment/bf13dfe6-6483-4b1f-878f-6f7b8673e13a`
 
-## Timestamp Format
+## Timestamp format
 
-### ISO 8601 with Timezone
+### ISO 8601 with timezone
 
 All timestamps use ISO 8601 format with timezone offset:
 
@@ -180,13 +178,13 @@ All timestamps use ISO 8601 format with timezone offset:
 | Time | `T10:00:00` | Hours:Minutes:Seconds |
 | Timezone | `+00:00` | UTC offset (UK typically +00:00 or +01:00 BST) |
 
-### Timezone Handling
+### Timezone handling
 
 - Winter (GMT): `+00:00`- Summer (BST): `+01:00`
 
 Consuming systems should handle both timezone offsets appropriately.
 
-## Complete Bundle Example (Truncated)
+## Complete bundle example (truncated)
 
 ```json
 {
@@ -232,19 +230,19 @@ Consuming systems should handle both timezone offsets appropriately.
 }
 ```
 
-## Processing Expectations
+## Processing expectations
 
-### For FHIR Servers (NHS Patient Data Manager)
+### For FHIR servers (NHS Patient Data Manager)
 
 - Process the bundle as an atomic transaction- Resolve all internal references- Apply conditional creates (`ifNoneMatch`)- Return a transaction response bundle with outcomes
 
-### For Consuming Partners
+### For consuming partners
 
 - Retrieve resources via FHIR API queries- Navigate from Composition to find related resources- Follow references to build complete picture- Handle missing resources gracefully
 
 ## Retrieving Health Check Data from PDM
 
-### Using the $document Operation
+### Using the $document operation
 
 To retrieve a complete NHS Health Check as a single bundle, use the FHIR `$document` operation on the Composition resource. This operation returns all resources referenced by the Composition in a single document Bundle.
 

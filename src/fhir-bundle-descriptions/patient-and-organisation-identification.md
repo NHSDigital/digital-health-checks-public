@@ -1,19 +1,19 @@
 ---
 layout: default
-title: "Patient and Organisation identification"
+title: "Patient and organisation identification"
 ---
 
-The NHS Digital Health Check uses standardised NHS identifiers to ensure patients and organisations are consistently identified across all resources in the FHIR Bundle. This document details the identification schemes used.
+The NHS Health Check online uses standardised NHS identifiers to ensure patients and organisations are consistently identified across all resources in the FHIR Bundle. This document details the identification schemes used.
 
 ---
 
-## Patient Identification
+## Patient identification
 
 ### NHS Number
 
 The **NHS Number** is the unique patient identifier used across all NHS services in England.
 
-#### Identifier Structure
+#### Identifier structure
 
 ```json
 {
@@ -35,7 +35,7 @@ The **NHS Number** is the unique patient identifier used across all NHS services
 | Uniqueness | Unique per patient across NHS |
 
 
-#### Usage Pattern
+#### Usage pattern
 
 The NHS Number is used as an **identifier reference** rather than a resource reference:
 
@@ -54,7 +54,7 @@ This pattern is used because:
 
 - The Patient resource is not included in the bundle- The patient is assumed to exist in the FHIR server- It allows resolution to the patient without bundling patient demographics
 
-#### Where Used
+#### Where used
 
 The NHS Number appears in these resources:
 
@@ -69,13 +69,13 @@ The NHS Number appears in these resources:
 
 ---
 
-## Organisation Identification
+## Organisation identification
 
 ### ODS Organisation Code
 
 The **Organisation Data Service (ODS)** maintains a registry of NHS organisations. Each organisation has a unique ODS code.
 
-#### Identifier Structure
+#### Identifier structure
 
 ```json
 {
@@ -98,13 +98,13 @@ The **Organisation Data Service (ODS)** maintains a registry of NHS organisation
 | Format | Alphanumeric (typically 5 characters) |
 | Registry | ODS Portal |
 
-#### ODS Code Lookup
+#### ODS code lookup
 
 ODS codes can be verified using:
 
 - **ODS Portal**: [https://odsportal.digital.nhs.uk/](https://odsportal.digital.nhs.uk/)
 
-#### Usage Contexts
+#### Usage contexts
 
 ODS codes are used for:
 
@@ -116,7 +116,7 @@ ODS codes are used for:
 | Report Performer | `DiagnosticReport.performer.identifier` | Who created the report |
 | Questionnaire Author | `QuestionnaireResponse.author.identifier` | Who recorded the answers |
 
-#### Example: Service Provider
+#### Example: service provider
 
 ```json
 {
@@ -131,15 +131,15 @@ ODS codes are used for:
 
 ---
 
-## Bundle Identification
+## Bundle identification
 
-### Health Check Session Identifier
+### Health Check session identifier
 
 Each NHS Health Check session has a unique identifier used for:
 
 - Bundle identification- Encounter identification- Traceability
 
-#### Identifier Structure
+#### Identifier structure
 
 ```json
 {
@@ -158,7 +158,7 @@ Each NHS Health Check session has a unique identifier used for:
 | Format | UUID (version 4) |
 | Scope | Unique per health check session |
 
-#### Where Used
+#### Where used
 
 | Resource | Element |
 | --- | --- |
@@ -167,9 +167,9 @@ Each NHS Health Check session has a unique identifier used for:
 
 ---
 
-## Reference Patterns
+## Reference patterns
 
-### Identifier-Based References
+### Identifier-based references
 
 Most references in the bundle use **identifier-based** references:
 
@@ -185,7 +185,7 @@ Most references in the bundle use **identifier-based** references:
 ```
 
 
-### Resource References
+### Resource references
 
 For resources **within the bundle**, direct resource references are used:
 
