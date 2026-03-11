@@ -18,27 +18,27 @@ Pages are numbered to suggest a reading order, but each page is self-contained a
 
 Step-by-step guidance for integrating with GP IT systems.
 
-- [Development guide](/dev-guide/)
-- [Integration overview](/dev-guide/integration-overview/)
-- [Health Check data flow](/dev-guide/health-check-data-flow/)
-- [Acknowledgement flow](/dev-guide/acknowledgement-flow/)
+- [Development guide](/digital-health-checks-public/dev-guide/)
+- [Integration overview](/digital-health-checks-public/dev-guide/integration-overview/)
+- [Health Check data flow](/digital-health-checks-public/dev-guide/health-check-data-flow/)
+- [Acknowledgement flow](/digital-health-checks-public/dev-guide/acknowledgement-flow/)
 
 ## FHIR Bundle Descriptions
 
 Reference documentation for FHIR bundle structures used in this integration.
 
-- [FHIR Bundle specification](/fhir-bundle-descriptions/)
-- [Overview](/fhir-bundle-descriptions/overview/)
-- [FHIR standard reference](/fhir-bundle-descriptions/fhir-standard-reference/)
-- [Terminology standards](/fhir-bundle-descriptions/terminology-standards/)
-- [Bundle structure](/fhir-bundle-descriptions/bundle-structure/)
-- [Patient and Organisation Identification](/fhir-bundle-descriptions/patient-and-organisation-identification/)
-- [Composition resource](/fhir-bundle-descriptions/composition-resource/)
-- [Encounter resource](/fhir-bundle-descriptions/encounter-resource/)
-- [Vital signs observations](/fhir-bundle-descriptions/vital-signs-observations/)
-- [Social history observations](/fhir-bundle-descriptions/social-history-observations/)
-- [Physical activity observations](/fhir-bundle-descriptions/physical-activity-observations/)
-- [Laboratory results](/fhir-bundle-descriptions/laboratory-results/)
-- [Risk assessment](/fhir-bundle-descriptions/risk-assessment/)
-- [Diagnostic report](/fhir-bundle-descriptions/diagnostic-report/)
-- [Questionnaire response](/fhir-bundle-descriptions/questionnaire-response/)
+- [FHIR Bundle specification](/digital-health-checks-public/fhir-bundle-descriptions/)
+- [Overview](/digital-health-checks-public/fhir-bundle-descriptions/overview/)
+- [FHIR standard reference](/digital-health-checks-public/fhir-bundle-descriptions/fhir-standard-reference/)
+- [Terminology standards](/digital-health-checks-public/fhir-bundle-descriptions/terminology-standards/)
+- [Bundle structure](/digital-health-checks-public/fhir-bundle-descriptions/bundle-structure/)
+- [Patient and Organisation Identification](/digital-health-checks-public/fhir-bundle-descriptions/patient-and-organisation-identification/)
+- [Composition resource](/digital-health-checks-public/fhir-bundle-descriptions/composition-resource/)
+- [Encounter resource](/digital-health-checks-public/fhir-bundle-descriptions/encounter-resource/)
+- [Vital signs observations](/digital-health-checks-public/fhir-bundle-descriptions/vital-signs-observations/)
+- [Social history observations](/digital-health-checks-public/fhir-bundle-descriptions/social-history-observations/)
+- [Physical activity observations](/digital-health-checks-public/fhir-bundle-descriptions/physical-activity-observations/)
+- [Laboratory results](/digital-health-checks-public/fhir-bundle-descriptions/laboratory-results/)
+- [Risk assessment](/digital-health-checks-public/fhir-bundle-descriptions/risk-assessment/)
+- [Diagnostic report](/digital-health-checks-public/fhir-bundle-descriptions/diagnostic-report/)
+- [Questionnaire response](/digital-health-checks-public/fhir-bundle-descriptions/questionnaire-response/)

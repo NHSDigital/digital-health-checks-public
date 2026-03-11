@@ -9,6 +9,6 @@ This development guide explains the integration between the Health Check Online 
 
 ## Contents
 
-- [Integration overview](../dev-guide/integration-overview/)
-- [Health Check data flow](../dev-guide/health-check-data-flow/)
-- [Acknowledgement flow](../dev-guide/acknowledgement-flow/)
+- [Integration overview](/digital-health-checks-public/dev-guide/integration-overview/)
+- [Health Check data flow](/digital-health-checks-public/dev-guide/health-check-data-flow/)
+- [Acknowledgement flow](/digital-health-checks-public/dev-guide/acknowledgement-flow/)
