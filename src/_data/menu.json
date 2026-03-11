@@ -1,0 +1,31 @@
+[
+  {
+    "label": "Dev Guide",
+    "items": [
+      { "label": "Development guide", "path": "/dev-guide/" },
+      { "label": "Integration overview", "path": "/dev-guide/integration-overview/" },
+      { "label": "Health Check data flow", "path": "/dev-guide/health-check-data-flow/" },
+      { "label": "Acknowledgement flow", "path": "/dev-guide/acknowledgement-flow/" }
+    ]
+  },
+  {
+    "label": "FHIR Bundle Descriptions",
+    "items": [
+      { "label": "FHIR Bundle specification", "path": "/fhir-bundle-descriptions/" },
+      { "label": "Overview", "path": "/fhir-bundle-descriptions/overview/" },
+      { "label": "FHIR standard reference", "path": "/fhir-bundle-descriptions/fhir-standard-reference/" },
+      { "label": "Terminology standards", "path": "/fhir-bundle-descriptions/terminology-standards/" },
+      { "label": "Bundle structure", "path": "/fhir-bundle-descriptions/bundle-structure/" },
+      { "label": "Patient & Organisation", "path": "/fhir-bundle-descriptions/patient-and-organisation-identification/" },
+      { "label": "Composition resource", "path": "/fhir-bundle-descriptions/composition-resource/" },
+      { "label": "Encounter resource", "path": "/fhir-bundle-descriptions/encounter-resource/" },
+      { "label": "Vital signs observations", "path": "/fhir-bundle-descriptions/vital-signs-observations/" },
+      { "label": "Social history observations", "path": "/fhir-bundle-descriptions/social-history-observations/" },
+      { "label": "Physical activity observations", "path": "/fhir-bundle-descriptions/physical-activity-observations/" },
+      { "label": "Laboratory results", "path": "/fhir-bundle-descriptions/laboratory-results/" },
+      { "label": "Risk assessment", "path": "/fhir-bundle-descriptions/risk-assessment/" },
+      { "label": "Diagnostic report", "path": "/fhir-bundle-descriptions/diagnostic-report/" },
+      { "label": "Questionnaire response", "path": "/fhir-bundle-descriptions/questionnaire-response/" }
+    ]
+  }
+]
