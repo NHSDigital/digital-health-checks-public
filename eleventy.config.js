@@ -11,6 +11,17 @@ export default async function (eleventyConfig) {
   // add support for mermaid diagrams
   eleventyConfig.addPlugin(pluginMermaid);
 
+  // Date formatting filter for NHS review date component
+  eleventyConfig.addFilter('nhsDate', (dateObj) => {
+    if (!dateObj) return '';
+    const d = new Date(dateObj);
+    return d.toLocaleDateString('en-GB', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
+  });
+
   // pass static assets through
   eleventyConfig.addPassthroughCopy('./src/assets');
 

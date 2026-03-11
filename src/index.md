@@ -8,14 +8,14 @@ This repository contains the technical documentation for integrating with the **
 
 The documentation is split into two sections:
 
-- **Dev Guide** — Start here. It explains the overall integration architecture, the data flow from the health check service to GP systems, and the acknowledgement process.
+- **Development Guide** — Start here. It explains the overall integration architecture, the data flow from the health check service to GP systems, and the acknowledgement process.
 - **FHIR Bundle Descriptions** — A detailed reference for the FHIR resources transmitted as part of each health check. Use this section to understand the structure, coding, and clinical content of individual resources.
 
 Pages are numbered to suggest a reading order, but each page is self-contained and can be consulted independently.
 
 ---
 
-## Dev Guide
+## Development Guide
 
 Step-by-step guidance for integrating with GP IT systems.
 
@@ -47,3 +47,10 @@ Reference documentation for FHIR bundle structures used in this integration.
   { title: "Diagnostic report", url: "/digital-health-checks-public/fhir-bundle-descriptions/diagnostic-report/" },
   { title: "Questionnaire response", url: "/digital-health-checks-public/fhir-bundle-descriptions/questionnaire-response/" }
 ]) }}
+
+
+<div class="nhsuk-review-date">
+  <p class="nhsuk-body-s">
+    Page last updated: <b>{{ page.date | nhsDate }}</b>
+  </p>
+</div>
