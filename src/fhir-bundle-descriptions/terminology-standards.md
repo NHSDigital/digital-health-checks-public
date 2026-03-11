@@ -3,11 +3,11 @@ layout: default
 title: "Terminology standards"
 ---
 
-The NHS Digital Health Check uses internationally recognised clinical terminology standards to ensure semantic interoperability. This document details all terminology systems used and their application within the FHIR Bundle.
+The NHS Health Check online uses internationally recognised clinical terminology standards to ensure semantic interoperability. This document details all terminology systems used and their application within the FHIR Bundle.
 
 ---
 
-## Terminology Systems Summary
+## Terminology systems summary
 
 | System | URI | Purpose |
 | --- | --- | --- |
@@ -32,7 +32,7 @@ SNOMED CT (Systematized Nomenclature of Medicine - Clinical Terms) is the primar
 **NHS SNOMED Browser**: [https://termbrowser.nhs.uk/](https://termbrowser.nhs.uk/)
 
 
-### NHS Health Check Specific Codes
+### NHS Health Check specific codes
 
 These SNOMED CT codes are specific to the NHS Health Check programme:
 
@@ -44,7 +44,7 @@ These SNOMED CT codes are specific to the NHS Health Check programme:
 | 2242651000000106 | Digital National Health Service Health Check requires follow-up (finding) | DiagnosticReport.conclusionCode |
 
 
-### Vital Signs Codes
+### Vital Signs codes
 
 | Code | Display | Usage |
 | --- | --- | --- |
@@ -59,7 +59,7 @@ These SNOMED CT codes are specific to the NHS Health Check programme:
 | 1162737008 | Self‑reported systolic blood pressure | Systolic component |
 | 1162735000 | Self‑reported diastolic blood pressure | Diastolic component |
 
-### Social History Codes
+### Social History codes
 
 | Code | Display | Usage |
 | --- | --- | --- |
@@ -74,7 +74,7 @@ These SNOMED CT codes are specific to the NHS Health Check programme:
 | `763256006` | Alcohol Use Disorders Identification Test - Consumption score | AUDIT-C |
 | 160303001 | Family history of diabetes mellitus (situation) |  |
 
-### Physical Activity Codes
+### Physical Activity codes
 
 | Code | Display | Usage |
 | --- | --- | --- |
@@ -84,7 +84,7 @@ These SNOMED CT codes are specific to the NHS Health Check programme:
 | 366211000000105 | GPPAQ physical activity index: moderately active | GPPAQ status |
 | 366171000000107 | GPPAQ physical activity index: moderately inactive | GPPAQ status |
 
-### Laboratory Codes
+### Laboratory codes
 
 | Code | Display | Usage |
 | --- | --- | --- |
@@ -93,7 +93,7 @@ These SNOMED CT codes are specific to the NHS Health Check programme:
 | 1029071000000109 | totalCholesterolRatio | High density/low density lipoprotein ratio (observable entity) |
 | 1003671000000109 | hba1cDiabetes | Haemoglobin A1c level (observable entity) |
 
-### Risk Assessment Codes
+### Risk Assessment codes
 
 | Code | Display | Usage |
 | --- | --- | --- |
@@ -101,7 +101,7 @@ These SNOMED CT codes are specific to the NHS Health Check programme:
 | `1325531000000102` | QRISK3 Healthy Heart Age | Heart age |
 | `1025601000000108` | Leicester Diabetes Risk Score | Diabetes risk |
 
-### Encounter Type Codes
+### Encounter Type codes
 
 | Code | Display | Usage |
 | --- | --- | --- |
@@ -119,7 +119,7 @@ LOINC (Logical Observation Identifiers Names and Codes) provides standardised co
 
 **LOINC Website**: [https://loinc.org/](https://loinc.org/)
 
-### Vital Signs Panel Codes
+### Vital Signs Panel codes
 
 | Code | Display | Component |
 | --- | --- | --- |
@@ -128,7 +128,7 @@ LOINC (Logical Observation Identifiers Names and Codes) provides standardised co
 | `29463-7` | Body weight | Weight |
 | `39156-5` | Body mass index (BMI) Ratio | BMI |
 
-### Blood Pressure Codes
+### Blood Pressure codes
 
 | Code | Display | Component |
 | --- | --- | --- |
@@ -136,13 +136,13 @@ LOINC (Logical Observation Identifiers Names and Codes) provides standardised co
 | `8480-6` | Systolic blood pressure | Systolic |
 | `8462-4` | Diastolic blood pressure | Diastolic |
 
-### Social History Codes
+### Social History codes
 
 | Code | Display | Usage |
 | --- | --- | --- |
 | `29762-2` | Social history Narrative | Social history panel |
 
-### Dual Coding Pattern
+### Dual Coding pattern
 
 Many observations include both SNOMED CT and LOINC codes for maximum interoperability:
 
@@ -177,7 +177,7 @@ UCUM provides a standardised, unambiguous system for expressing units of measure
 
 **UCUM Website**: [https://ucum.org/](https://ucum.org/)
 
-### Units Used
+### Units used
 
 | UCUM Code | Display | Usage |
 | --- | --- | --- |
@@ -187,7 +187,7 @@ UCUM provides a standardised, unambiguous system for expressing units of measure
 | `mmHg` | mmHg | Blood pressure |
 | `mmol/L` | mmol/L | Cholesterol, HbA1c |
 
-### Example Usage
+### Example usage
 
 ```json
 {

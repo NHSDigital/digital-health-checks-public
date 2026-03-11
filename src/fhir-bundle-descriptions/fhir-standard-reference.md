@@ -4,7 +4,7 @@ title: "FHIR standard reference"
 ---
 {% from "inset-text.njk" import insetText %}
 
-The NHS Digital Health Check service implements the **HL7 FHIR R4** (Release 4) specification with conformance to the **UK Core FHIR Implementation Guide**. This document outlines the standards foundation and conformance requirements.
+The NHS Health Check online service implements the **HL7 FHIR R4** (Release 4) specification with conformance to the **UK Core FHIR Implementation Guide**. This document outlines the standards foundation and conformance requirements.
 
 ## HL7 FHIR R4 Specification
 
@@ -12,7 +12,7 @@ The NHS Digital Health Check service implements the **HL7 FHIR R4** (Release 4)
 
 FHIR (Fast Healthcare Interoperability Resources) is a standard for exchanging healthcare information electronically. It combines the best features of HL7's previous standards (v2, v3, CDA) with modern web technologies.
 
-### Version Information
+### Version information
 
 | Specification | Version 
 | --- | --- | 
@@ -20,11 +20,11 @@ FHIR (Fast Healthcare Interoperability Resources) is a standard for exchanging h
 | Publication Date | 2019-10-30 |
 | Specification URL | [https://hl7.org/fhir/R4/](https://hl7.org/fhir/R4/) |
 
-### Core Concepts
+### Core concepts
 
 #### Resources
 
-FHIR defines healthcare data as **Resources** - discrete units of exchangeable data. The NHS Digital Health Check uses the following resource types:
+FHIR defines healthcare data as **Resources** - discrete units of exchangeable data. The NHS Health Check online uses the following resource types:
 
 | Resource | UK Core / FHIR Spec Link | Purpose |
 | --- | --- | --- |
@@ -38,7 +38,7 @@ FHIR defines healthcare data as **Resources** - discrete units of exchangeable d
 
 {{ insetText("This project does not use any custom profiles. Where a UK Core profile exists (e.g. Composition, Encounter, Observation, DiagnosticReport), resources conform to that profile. For Bundle, RiskAssessment, and QuestionnaireResponse, no UK Core profile is defined, so the base FHIR R4 resource definitions apply.") }}
 
-#### Data Types
+#### Data types
 
 Common FHIR data types used in this implementation:
 
@@ -58,7 +58,7 @@ Common FHIR data types used in this implementation:
 
 UK Core is the NHS England endorsed FHIR implementation guide that defines UK-specific profiles, extensions, and value sets. It ensures consistent FHIR implementations across the UK healthcare system.
 
-### Version Information
+### Version information
 
 | Specification | Version | Status |
 | --- | --- | --- |
@@ -67,7 +67,7 @@ UK Core is the NHS England endorsed FHIR implementation guide that defines UK-sp
 | Simplifier URL | [https://simplifier.net/HL7FHIRUKCoreR4](https://simplifier.net/HL7FHIRUKCoreR4) |  |
 | Implementation Guide | [https://simplifier.net/guide/uk-core-implementation-guide-stu3-sequence](https://simplifier.net/guide/uk-core-implementation-guide-stu3-sequence) |  |
 
-### Applicable UK Core Profiles
+### Applicable UK Core profiles
 
 The following UK Core profiles are relevant to this implementation:
 
@@ -107,7 +107,7 @@ Key conformance points:
 
 - `type` identifies the document type- `section` organises content- `subject` and `author` are required
 
-## UK Core Code Systems
+## UK Core code systems
 
 The following UK Core code systems are used:
 
@@ -127,9 +127,9 @@ System: https://fhir.hl7.org.uk/CodeSystem/UKCore-RecordStandardHeadings
 
 ## FHIR RESTful API
 
-### Transaction Bundles
+### Transaction bundles
 
-The NHS Digital Health Check transmits data as a FHIR **Transaction Bundle**. This is an atomic operation where all resources are processed together.
+The NHS Health Check online transmits data as a FHIR **Transaction Bundle**. This is an atomic operation where all resources are processed together.
 
 ```json
 {
@@ -148,13 +148,13 @@ The NHS Digital Health Check transmits data as a FHIR **Transaction Bundle**. Th
 }
 ```
 
-### HTTP Methods
+### HTTP methods
 
 | Method | Usage | Idempotent |
 | --- | --- | --- |
 | `PUT` | Create or update a resource | Yes |
 
-### Conditional Operations
+### Conditional operations
 
 The implementation uses conditional create to ensure idempotency:
 
@@ -168,17 +168,17 @@ The implementation uses conditional create to ensure idempotency:
 }
 ```
 
-The `ifNoneMatch: "*"` header indicates the resource should only be created if it doesn't already exist.
+The `ifNoneMatch: "*"` header indicates the resource should only be created if it does not already exist.
 
-## Conformance Requirements
+## Conformance requirements
 
-### Must Support Elements
+### Must Support elements
 
 Elements marked as "Must Support" in UK Core profiles must be:
 
 - Populated if the data is available- Understood by receiving systems
 
-### Required vs Optional
+### Required vs optional
 
 | Cardinality | Meaning |
 | --- | --- |

@@ -1,6 +1,6 @@
 {
-  "title": "Digital Health Checks",
-  "description": "Technical documentation for integrating with the NHS Digital Health Check online service.",
+  "title": "NHS Health Check online",
+  "description": "Technical documentation for integrating with the NHS Health Check online service.",
   "author": "NHS England",
   "repositoryUrl": "https://github.com/NHSDigital/digital-health-checks-public",
   "slackSupportUrl": "",

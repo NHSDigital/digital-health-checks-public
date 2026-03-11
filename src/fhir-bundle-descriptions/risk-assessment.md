@@ -7,7 +7,7 @@ Risk assessments calculate the patient's probability of developing certain condi
 
 - **QRISK3** - 10-year cardiovascular disease risk- **Leicester Diabetes Risk Score** - Diabetes risk
 
-## Risk Assessments Included
+## Risk assessments included
 
 | Assessment | SNOMED CT Code | Output |
 | --- | --- | --- |
@@ -15,7 +15,7 @@ Risk assessments calculate the patient's probability of developing certain condi
 | QRISK3 Heart Age | `1325531000000102` | Years |
 | Leicester Diabetes Risk Score | `1025601000000108` | Score |
 
-## QRISK3 Cardiovascular Risk Assessment
+## QRISK3 Cardiovascular Risk assessment
 
 QRISK3 is the recommended cardiovascular risk calculator for use in England and Wales. It estimates the 10-year risk of developing cardiovascular disease.
 
@@ -70,9 +70,9 @@ QRISK3 is the recommended cardiovascular risk calculator for use in England and 
 }
 ```
 
-## RiskAssessment Element Specification
+## RiskAssessment element specification
 
-### Core Elements
+### Core elements
 
 | Element | Cardinality | Type | Description |
 | --- | --- | --- | --- |
@@ -110,9 +110,9 @@ References the data sources used for the risk calculation:
 
 This links to the medical history questionnaire responses used in the calculation.
 
-## QRISK3 Predictions
+## QRISK3 predictions
 
-### Prediction Structure
+### Prediction structure
 
 Each prediction contains:
 
@@ -135,7 +135,7 @@ Each prediction contains:
 }
 ```
 
-### QRISK3 10-Year CVD Risk Score
+### QRISK3 10-year CVD risk score
 
 | Element | Value |
 | --- | --- |
@@ -146,7 +146,7 @@ Each prediction contains:
 
 **Example**: `4.763396` represents a 4.76% risk of developing CVD in the next 10 years.
 
-### QRISK3 Heart Age
+### QRISK3 Heart age
 
 | Element | Value |
 | --- | --- |
@@ -157,7 +157,7 @@ Each prediction contains:
 
 **Example**: `56` represents a heart age of 56 years.
 
-## Leicester Diabetes Risk Score
+## Leicester Diabetes Risk score
 
 The Leicester Diabetes Risk Score assesses the risk of developing Type 2 diabetes.
 
@@ -195,7 +195,7 @@ The Leicester Diabetes Risk Score assesses the risk of developing Type 2 diabete
 }
 ```
 
-### Prediction Code
+### Prediction code
 
 | Element | Value |
 | --- | --- |
@@ -203,7 +203,7 @@ The Leicester Diabetes Risk Score assesses the risk of developing Type 2 diabete
 | Display | Leicester Diabetes Risk Score |
 | Value Type | `probabilityDecimal` |
 
-## Multiple Predictions Example
+## Multiple predictions example
 
 A QRISK3 RiskAssessment contains multiple predictions in a single resource:
 
@@ -240,9 +240,9 @@ A QRISK3 RiskAssessment contains multiple predictions in a single resource:
 
 **Note**: Both the 10-year risk score and heart age are included as separate predictions in the same RiskAssessment.
 
-## Relationship to Other Resources
+## Relationship to other resources
 
-### Data Flow
+### Data flow
 
 ```
 Patient Data Collection
@@ -264,7 +264,7 @@ Patient Data Collection
 - **encounter**: Links to Encounter
 - **subject**: Links to Patient (via NHS Number)
 
-## Common Elements
+## Common elements
 
 | Element | Description |
 | --- | --- |

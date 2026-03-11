@@ -5,7 +5,7 @@ title: "Laboratory results"
 
 Laboratory observations capture blood test results from the NHS Health Check. These include cholesterol measurements (total cholesterol, HDL, and cholesterol ratio) and HbA1c (glycated haemoglobin) for diabetes screening.
 
-## Observations Included
+## Observations included
 
 | Observation | SNOMED CT Code | Unit |
 | --- | --- | --- |
@@ -15,7 +15,7 @@ Laboratory observations capture blood test results from the NHS Health Check. Th
 | HDL/LDL Ratio | `1029071000000109` | ratio |
 | HbA1c | `441689006` | mmol/mol |
 
-## Observation Category
+## Observation category
 
 All laboratory results use the `laboratory` category:
 
@@ -36,7 +36,7 @@ All laboratory results use the `laboratory` category:
 }
 ```
 
-## Cholesterol Panel
+## Cholesterol panel
 
 The cholesterol panel groups related cholesterol measurements.
 
@@ -93,7 +93,7 @@ The cholesterol panel groups related cholesterol measurements.
 }
 ```
 
-### Panel Code
+### Panel code
 
 | System | Code | Display |
 | --- | --- | --- |
@@ -242,7 +242,7 @@ The cholesterol panel groups related cholesterol measurements.
 | --- | --- | --- |
 | SNOMED CT | `1029071000000109` | High density/low density lipoprotein ratio |
 
-### HbA1c (Glycated Haemoglobin)
+### HbA1c (glycated haemoglobin)
 
 HbA1c measures average blood glucose over the preceding 2-3 months and is used for diabetes screening.
 

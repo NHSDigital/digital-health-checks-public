@@ -6,9 +6,9 @@ title: "Health Check data flow"
 
 ## Introduction
 
-To allow the GP IT system to retrieve and process the FHIR payload, it must first onboard to two separate services: the Multicast Notification Service (MNS) and the Patient Data Manager (PDM). After onboarding the first step is to subscribe to the relevant event. Once subscribed, the GP IT system can use the metadata in the payload to pull the Patient Health Check data from the PDM service. The remainder of this document explains how a GP IT system can subscribe to the event and process the associated FHIR resources.
+Before retrieving and processing the FHIR payload, the GP IT system must onboard to 2 separate services: the Multicast Notification Service (MNS) and the Patient Data Manager (PDM). After onboarding, the first step is to subscribe to the relevant event. Once subscribed, the GP IT system can use the metadata in the payload to pull the patient Health Check data from the PDM service. The remainder of this document explains how a GP IT system can subscribe to the event and process the associated FHIR resources.
 
-## MNS Subscription
+## MNS subscription
 
 This is specific to the subscription channel therefore please follow the [official MNS documentation](https://digital.nhs.uk/developer/api-catalogue/multicast-notification-service#post-/subscriptions).
 
@@ -49,9 +49,9 @@ The NHS Health Check online service will publish an MNS event each time Health C
 | filtering | Details of the data used for filtering the messages for consumers | `{ "gppractice": "{GPPracticeCode}" }` |
 | dataref | A link to an API on the publishing service to retrieve full information about the event or the subject record. A reference to the Composition resource. The `$document` operation ensures that the complete bundle is returned. | `https://{PDM_BASE_URL}/Composition/{ID}/$document` |
 
-## FHIR Payload processing
+## FHIR payload processing
 
-All Health Check–related information is stored in PDM as a set of FHIR resources. These resources are linked together through a FHIR Composition resource. To ensure the full bundle is returned by the FHIR server, the `$document` operation must be used. This operation will be included by default in the data pointer (`dataref`) sent within the MNS event. Example link: `https://{PDM_BASE_URL}/Composition/{ID}/$document`.
+PDM stores all Health Check–related information as a set of FHIR resources. A FHIR Composition resource links these resources together. Use the `$document` operation to retrieve the full bundle from the FHIR server. The MNS event includes this operation by default in the data pointer (`dataref`). Example link: `https://{PDM_BASE_URL}/Composition/{ID}/$document`.
 
 {{ insetText('Please follow our Health Check specific <a href="/digital-health-checks-public/fhir-bundle-descriptions/">FHIR Resources spec</a> for further details.') }}
 

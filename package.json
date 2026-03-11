@@ -1,7 +1,7 @@
 {
   "name": "digital-health-checks-public",
   "version": "1.0.0",
-  "description": "NHS Digital Health Check — Developer Documentation",
+  "description": "NHS Health Check online — Developer Documentation",
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
